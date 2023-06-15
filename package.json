@@ -23,7 +23,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src --cache",
+    "lint:quiet": "eslint ./src --cache --quiet",
+    "lint:fix": "eslint ./src --cache --fix",
+    "lint:fixquiet": "eslint ./src --cache --fix --quiet"
   },
   "browserslist": {
     "production": [

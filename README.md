@@ -10,3 +10,25 @@
    
    yarn add @mui/material @emotion/react @emotion/styled
    
+### Install eslint
+
+ 1. remove the follow code from ‘package.json’ file
+
+```json
+"eslintConfig": {
+   "extends":[
+      "react-app",
+      "react-app/jest"
+   ]
+}
+```
+
+On terminal, run:
+
+    npm install eslint --save-dev
+    npx eslint --init
+
+    npx eslint src/* 
+
+    
+    

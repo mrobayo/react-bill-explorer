@@ -10,7 +10,7 @@ type BillExplorerProps = {
 
 const BillExplorer: React.FC<BillExplorerProps> = (props) => {
   return (
-    <div>BillExplorer</div>
+      <div>BillExplorer</div>
   );
 };
 

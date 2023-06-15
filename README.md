@@ -34,3 +34,8 @@
 
    - https://www.npmjs.com/package/husky
 
+### Install storybook
+
+   yarn add -D typescript@latest
+   npx storybook@latest init
+   

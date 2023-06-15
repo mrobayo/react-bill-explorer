@@ -14,21 +14,23 @@
 
  1. remove the follow code from ‘package.json’ file
 
-```json
-"eslintConfig": {
-   "extends":[
-      "react-app",
-      "react-app/jest"
-   ]
-}
-```
+    ```json
+    "eslintConfig": {
+       "extends":[
+          "react-app",
+          "react-app/jest"
+       ]
+    }
+    ```
 
-On terminal, run:
+ 2. On terminal, run:
 
     npm install eslint --save-dev
     npx eslint --init
 
     npx eslint src/* 
 
-    
-    
+### Install husky
+
+   - https://www.npmjs.com/package/husky
+

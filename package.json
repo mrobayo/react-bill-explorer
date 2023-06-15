@@ -27,7 +27,8 @@
     "lint": "eslint ./src --cache",
     "lint:quiet": "eslint ./src --cache --quiet",
     "lint:fix": "eslint ./src --cache --fix",
-    "lint:fixquiet": "eslint ./src --cache --fix --quiet"
+    "lint:fixquiet": "eslint ./src --cache --fix --quiet",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -48,6 +49,7 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.32.2"
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.3"
   }
 }

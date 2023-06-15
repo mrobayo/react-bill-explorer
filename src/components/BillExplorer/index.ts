@@ -1,1 +1,1 @@
-export {default} from './BillExplorer';
+export { default } from './BillExplorer'

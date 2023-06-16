@@ -1,15 +1,23 @@
 import React from 'react'
-import { type BillType } from '../../types'
+import { type BillKeys, type BillType, type FormatType } from '../../types'
+import BillHeader from './BillHeader'
+import { Table } from '@mui/material'
+import BillContent from './BillContent'
 
-interface BillExplorerProps {
-  bill: BillType[]
-  headers: string[]
-  factKeys: string[]
+export interface BillExplorerProps {
+  bills: BillType[]
+  dimensions: Array<{ name: BillKeys, label: string, datetimePattern?: string }>
+  facts: Array<{ name: BillKeys, label: string, format?: FormatType }>
 }
 
-const BillExplorer: React.FC<BillExplorerProps> = (props) => {
+const BillExplorer: React.FC<BillExplorerProps> = ({ bills, dimensions, facts }) => {
   return (
-      <div>BillExplorer</div>
+      <div>
+        <Table>
+            <BillHeader headers={[...dimensions, ...facts]} />
+            <BillContent bills={bills} dimensions={dimensions} facts={facts} />
+        </Table>
+      </div>
   )
 }
 

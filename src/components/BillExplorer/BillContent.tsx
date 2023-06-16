@@ -1,7 +1,7 @@
 import React from 'react'
 import { TableBody, TableCell, TableRow } from '@mui/material'
 import { type BillKeys, type BillType, type FormatType } from '../../types'
-import { get } from '@s-libs/micro-dash'
+import { get } from 'lodash'
 
 interface BillContentProps {
   bills: BillType[]

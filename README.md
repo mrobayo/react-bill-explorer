@@ -1,4 +1,4 @@
-# Bill Explorer
+# The Bills Explorer
 
   Let's explore a group of bills, analyze and summarize them by category.
 
@@ -8,7 +8,9 @@
 
 ### Installed components
    
+```shell
    yarn add @mui/material @emotion/react @emotion/styled
+```
    
 ### Install eslint
 
@@ -25,10 +27,13 @@
 
  2. On terminal, run:
 
-    npm install eslint --save-dev
+    ```shell
     npx eslint --init
 
     npx eslint src/* 
+    npm install eslint --save-dev
+    ```
+
 
 ### Install husky
 
@@ -36,6 +41,9 @@
 
 ### Install storybook
 
+```shell
    yarn add -D typescript@latest
    npx storybook@latest init
-   
+```
+
+### 

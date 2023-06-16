@@ -1,25 +1,33 @@
 import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+
+import { oneRowBill } from './components/BillExplorer/__mocks__/bills.mock'
+import BillExplorer from './components/BillExplorer'
+import MainLayout from './layout'
+import { type BillKeys } from './types'
+import { Typography } from '@mui/material'
 
 const App: React.FC = () => {
+  const dimensions: Array<{ name: BillKeys, label: string, datetimePattern?: string }> = [
+    { name: ['issuerName'], label: 'Issuer' },
+    { name: ['billType'], label: 'Type' },
+    { name: ['issueDate'], label: 'Date' }
+  ]
+  const facts: Array<{ name: BillKeys, label: string, datetimePattern?: string }> = [
+    { name: ['totalPrice'], label: 'Total Price' },
+    { name: ['quantity'], label: 'Quantity' }
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <MainLayout theme={'light'}>
+      <header>
+            <Typography variant="h2" gutterBottom>
+                The Bills Explorer
+            </Typography>
       </header>
-    </div>
+      <section>
+        <BillExplorer bills={[oneRowBill]} dimensions={dimensions} facts={facts} />
+      </section>
+    </MainLayout>
   )
 }
 
